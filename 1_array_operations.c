@@ -9,7 +9,7 @@ for(i=l-1;i>=pos-1;i--){
 }
 *(a+pos-1)=n;
 printf("inserted\n");
-for(i=0;i<l;i++){
+for(i=0;i<l+1;i++){
 printf(" %d ",*(a+i));
 }}
 
@@ -42,7 +42,7 @@ printf("found at %d position",i+1);
 }}}
 
 void main(){
-int ar[25],b,l,*p,rep,arsize,i;
+int ar[25],b,*p,rep,arsize,i;
 printf("enter size of array:\t");
 scanf("%d",&arsize);
 printf("enter array elements:\t");
@@ -56,7 +56,6 @@ printf(" %d ",ar[i]);
 do{
 printf("\n1.insert\n2.delete\n3.view\n4.search\n");
 scanf("%d",&b);
-l=sizeof(ar)/sizeof(int);
 p=ar;
 if(b==1){
 insert(ar,arsize);
